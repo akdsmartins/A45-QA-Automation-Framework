@@ -20,10 +20,6 @@ public class BaseTest {
 
     @BeforeMethod
     public void setupBrowser() {
-        //Add ChromeOptions argument to fix websocket error
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
