@@ -20,7 +20,6 @@ public class Homework17 extends BaseTest {
         clickAddTo();
         selectPlaylist();
         verifyMessage();
-
     }
 
     public void searchSong(String title) throws InterruptedException {
