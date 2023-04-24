@@ -29,10 +29,7 @@ public class Homework17 extends BaseTest {
         addToFavorites.click();
 
         WebElement notificationMessage = driver.findElement(By.cssSelector("div.success.show"));
-        Assert.assertEquals();
-
-
-
+        Assert.assertEquals(notificationMessage.isDisplayed(), true);
     }
 
 
