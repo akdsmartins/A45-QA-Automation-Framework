@@ -36,7 +36,7 @@ public class Homework17 extends BaseTest {
     }
 
     public void selectFirstSong() throws InterruptedException {
-        WebElement firstSong = driver.findElement(By.cssSelector("tr.song-item.playing.selected td:nth-child(2)"));
+        WebElement firstSong = driver.findElement(By.xpath("//*[@id=\"songResultsWrapper\"]/div/div/div[1]/table/tr[1]/td[2]"));
         firstSong.click();
         Thread.sleep(2000);
     }
