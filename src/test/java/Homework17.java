@@ -6,12 +6,15 @@ import org.testng.annotations.Test;
 public class Homework17 extends BaseTest {
     @Test
     public void addSongToPlaylist() {
+
+        //preconditions
         setUpBrowser();
         openLoginUrl();
         enterValidEmail("amanda.martins@testpri.io");
         enterValidPassword("te$t$tudent");
         clickSubmit();
 
+        //add song to playlist test
         WebElement searchField = driver.findElement(By.cssSelector("[type='search']"));
         searchField.click();
         searchField.sendKeys("dark days");
@@ -31,7 +34,6 @@ public class Homework17 extends BaseTest {
         WebElement notificationMessage = driver.findElement(By.cssSelector("div.success.show"));
         Assert.assertEquals(notificationMessage.isDisplayed(), true);
     }
-
 
 
 }

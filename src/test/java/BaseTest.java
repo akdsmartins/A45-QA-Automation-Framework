@@ -43,8 +43,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void clickSubmit () {
-        WebElement passwordField = driver.findElement(By.cssSelector("button[type='submit']"));
-        passwordField.click();
+        WebElement submitButton = driver.findElement(By.cssSelector("button[type='submit']"));
+        submitButton.click();
     }
     @AfterMethod
     public void closeBrowser() {
