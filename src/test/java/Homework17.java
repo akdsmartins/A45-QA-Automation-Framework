@@ -9,7 +9,7 @@ public class Homework17 extends BaseTest {
 
         //preconditions set in BaseTest
         openLoginUrl();
-        enterValidEmail("amanda.martins@testpri.io");
+        enterValidEmail("amanda.martins@testpro.io");
         enterValidPassword("te$t$tudent");
         clickSubmit();
 
