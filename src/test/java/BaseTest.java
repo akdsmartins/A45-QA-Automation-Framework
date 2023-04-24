@@ -25,7 +25,7 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
 
 
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
