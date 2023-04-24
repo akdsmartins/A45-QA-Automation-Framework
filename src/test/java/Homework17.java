@@ -42,7 +42,7 @@ public class Homework17 extends BaseTest {
     }
 
     public void clickAddTo() throws InterruptedException {
-        WebElement addTo = driver.findElement(By.cssSelector("[title='Add selected songs to…']"));
+        WebElement addTo = driver.findElement(By.cssSelector("button.btn-add-to"));
         addTo.click();
         Thread.sleep(2000);
     }
