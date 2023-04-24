@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import java.time.Duration;
 
 public class BaseTest {
-    WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeSuite
     static void setupClass () {
