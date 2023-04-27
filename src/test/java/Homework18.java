@@ -24,9 +24,5 @@ public class Homework18 extends BaseTest{
    WebElement verifySongPlaying = driver.findElement(By.cssSelector("span.pause"));
    Assert.assertTrue(verifySongPlaying.isDisplayed());
    Thread.sleep(2000);
-
  }
-
-
-
 }
