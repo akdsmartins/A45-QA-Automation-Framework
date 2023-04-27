@@ -11,6 +11,7 @@ public class Homework19 extends BaseTest {
         launchBrowser(url);
         provideEmail("amanda.martins@testpro.io");
         providePassword("te$t$tudent");
+        clickSubmit();
 
         WebElement selectPlaylist = driver.findElement(By.cssSelector(".side.side-nav #playlists li:nth-child(3)"));
         selectPlaylist.click();
