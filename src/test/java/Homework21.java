@@ -34,7 +34,6 @@ public class Homework21 extends BaseTest{
         editField.sendKeys(Keys.ENTER);
 
         WebElement upDatedName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mainWrapper #sidebar #playlists a.active")));
-        
-
+        Assert.assertEquals(upDatedName.getText(),"MyPlaylist");
     }
 }
