@@ -8,8 +8,6 @@ public class Homework21 extends BaseTest{
     @Test
     public void renamePlaylist(){
 
-        String newPlaylistName = "MyPlaylist";
-
         navigateToPage();
         provideEmail("amanda.martins@testpro.io");
         providePassword("te$t$tudent");
@@ -35,7 +33,8 @@ public class Homework21 extends BaseTest{
         editField.sendKeys("MyPlaylist");
         editField.sendKeys(Keys.ENTER);
 
-        WebElement upDatedName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mainWrapper #sidebar #playlists li:nth-child(3)")));
+        WebElement upDatedName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mainWrapper #sidebar #playlists a.active")));
+        
 
     }
 }
