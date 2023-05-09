@@ -11,10 +11,10 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver givenDriver) {
         super(givenDriver);
     }
-    By userAvatarIcon = By.cssSelector("img.avatar");
-    By firstPlaylist = By.cssSelector("#mainWrapper #sidebar #playlists li:nth-child(3)");
-    By editPlaylistButton = By.cssSelector(".menu.playlist-item-menu li:nth-child(1)");
-    By playlistField = By.cssSelector("input[data-testid='inline-playlist-name-input']");
+    private By userAvatarIcon = By.cssSelector("img.avatar");
+    private By firstPlaylist = By.cssSelector("#mainWrapper #sidebar #playlists li:nth-child(3)");
+    private By editPlaylistButton = By.cssSelector(".menu.playlist-item-menu li:nth-child(1)");
+    private By playlistField = By.cssSelector("input[data-testid='inline-playlist-name-input']");
     public WebElement getUserAvatar () {
         return findElement(userAvatarIcon);
     }
