@@ -1,11 +1,8 @@
-import com.github.dockerjava.api.model.Driver;
-import org.openqa.selenium.remote.service.DriverService;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class Homework22 extends BaseTest{
+public class Homework24 extends BaseTest{
     @Test
     public void renamePlaylist (){
 
