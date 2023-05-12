@@ -9,10 +9,14 @@ public class Homework24 extends BaseTest{
         LoginPage loginpage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
+<<<<<<< Updated upstream:src/test/java/Homework24.java
         loginpage.login();
         homePage.rightClickFirstPlaylist();
         homePage.clickEdit();
         homePage.enterPlaylistName();
         homePage.assertPlaylistExist();
+=======
+
+>>>>>>> Stashed changes:src/test/java/Homework23.java
     }
 }

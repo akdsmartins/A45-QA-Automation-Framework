@@ -28,7 +28,12 @@ public class LoginPage extends BasePage {
     public void clickSubmit() {
         submitBtn.click();
     }
+<<<<<<< Updated upstream
     public void login(){
+=======
+
+    public void login() {
+>>>>>>> Stashed changes
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");
         clickSubmit();
