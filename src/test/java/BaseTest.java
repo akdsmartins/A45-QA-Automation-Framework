@@ -64,10 +64,10 @@ public class BaseTest {
         DesiredCapabilities caps = new DesiredCapabilities();
         String gridURL = "http://192.168.15.3:4444";
         switch (browser){
-            case "MicrosofEdge":
+            case "MicrosofEdge": //gradle clean test -Dbrowser=MicrosofEdge
                 WebDriverManager.edgedriver().setup();
                 return driver = new EdgeDriver();
-            case "grid-edge":
+            case "grid-edge": //gradle clean test -Dbrowser=grid-edge
                 caps.setCapability("browserName", "MicrosofEdge");
                 return driver = new RemoteWebDriver(URI.create(gridURL).toURL(),caps);
             case "grid-chrome":
