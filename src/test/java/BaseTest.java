@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,7 +23,8 @@ public class BaseTest {
 
     @BeforeSuite
     static void setupClass() {
-        WebDriverManager.chromedriver().setup();
+       // WebDriverManager.chromedriver().setup();
+        // WebDriverManager.edgedriver().setup();
     }
 
     @DataProvider(name="IncorrectLoginData")
@@ -36,17 +38,33 @@ public class BaseTest {
     }
     @BeforeMethod
     @Parameters({"BaseURL"})
-    public void launchBrowser(String BaseURL) {
-        //      Added ChromeOptions argument below to fix websocket error
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
+    public void launchBrowser() {
+        //Added ChromeOptions argument below to fix websocket error
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
 
-        driver = new ChromeDriver(options);
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+       //driver = new ChromeDriver(options);
+      //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver = new EdgeDriver();
+        driver = pickBrowser(System.getProperty("browser"));
+
+
+
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         actions = new Actions(driver);
-        url = BaseURL;
+        //url = BaseURL;
         navigateToPage();
+    }
+
+    public static WebDriver pickBrowser (String browser){
+        switch (browser){
+            case "MicrosofEdge":
+                WebDriverManager.edgedriver().setup();
+                return driver = new EdgeDriver();
+            default:
+                WebDriverManager.chromedriver().setup();
+                return driver = new ChromeDriver();
+        }
     }
 
     @AfterMethod//(enabled = false)

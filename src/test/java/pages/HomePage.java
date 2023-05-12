@@ -22,19 +22,21 @@ public class HomePage extends BasePage {
     private WebElement editPlaylistButton;
     @FindBy(css = "input[data-testid='inline-playlist-name-input']")
     private WebElement playlistField;
+
+    //Methods
     public WebElement getUserAvatar () {
         return findElement(userAvatarIcon);
     }
     public void rightClickFirstPlaylist () {
-        firstPlaylist.contect;
+        contextClick(firstPlaylist);
     }
     public void clickEdit () {
         click(editPlaylistButton);
     }
     public void enterPlaylistName () {
-        findElement(playlistField).sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
-        findElement(playlistField).sendKeys("MyPlaylist");
-        findElement(playlistField).sendKeys(Keys.ENTER);
+        playlistField.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE));
+        playlistField.sendKeys("MyPlaylist");
+        playlistField.sendKeys(Keys.ENTER);
     }
     public void assertPlaylistExist () {
         WebElement upDatedName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#mainWrapper #sidebar #playlists a.active")));
