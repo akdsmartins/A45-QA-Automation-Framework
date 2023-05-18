@@ -25,6 +25,7 @@ public class LoginStepDef {
     public void openBrowser(){
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
@@ -40,13 +41,13 @@ public class LoginStepDef {
     }
 
     @When("I enter email {string}")
-    public void iEnterEmail(String arg0) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[type='email']"))).sendKeys();
+    public void iEnterEmail(String email) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[type='email']"))).sendKeys(email);
     }
 
     @And("I enter password {string}")
-    public void iEnterPassword(String arg0) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[type='password']"))).sendKeys();
+    public void iEnterPassword(String password) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[type='password']"))).sendKeys(password);
     }
 
     @And("I submit")
@@ -56,5 +57,6 @@ public class LoginStepDef {
 
     @Then("I am logged in")
     public void iAmLoggedIn() {
+        Assert.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.avatar"))).isDisplayed());
     }
 }
