@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -39,7 +40,12 @@ public class BasePage {
 
         //Explicit wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.get(url);
+    }
 
+    @AfterMethod
+    public void closeBrowser(){
+        driver.quit();
     }
 
 
