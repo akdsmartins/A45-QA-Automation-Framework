@@ -28,7 +28,7 @@ public class BasePage {
         //WebDriverManager.edgedriver().setup();
     }
 
-    //Launch the browser and set the explicit wait in before method
+    //Launch the browser, set the explicit wait and create an object of the action class in before method
     @BeforeMethod
     static void launchBrowser (){
         //Added ChromeOptions argument below to fix websocket error
@@ -41,6 +41,10 @@ public class BasePage {
 
         //Explicit wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        //Actions class object
+        actions = new Actions(driver);
+
         driver.get(url);
     }
 
