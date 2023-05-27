@@ -1,3 +1,4 @@
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,6 +11,12 @@ public class LoginPage extends BasePage{
     private WebElement passwordField;
     @FindBy(css = "button[type='submit']")
     private WebElement submitBtn;
+
+
+    //This method is set, so you can pass the driver to the test method
+    public LoginPage(WebDriver driver) {
+        super();
+    }
 
     //Methods
     public void provideEmail (String email){

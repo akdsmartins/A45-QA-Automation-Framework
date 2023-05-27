@@ -6,6 +6,9 @@ public class LoginTests extends BasePage{
     public void LoginValidEmailAndPassword (){
         LoginPage loginPage = new LoginPage(driver);
 
+        loginPage.provideEmail("amanda.martins@testpro.io");
+        loginPage.providePassword("te$t$tudent");
+        loginPage.clickLogin();
     }
 
 
