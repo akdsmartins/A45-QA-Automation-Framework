@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,9 +27,9 @@ public class BasePage {
         //WebDriverManager.edgedriver().setup();
     }
 
-    //Launch the browser, set the explicit wait and create an object of the action class in before method
+    //Launch the browser, set the explicit wait and create an object of the action class in before method.
     @BeforeMethod
-    static void launchBrowser (){
+    void launchBrowser(){
         //Added ChromeOptions argument below to fix websocket error
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
@@ -42,6 +43,9 @@ public class BasePage {
 
         //Actions class object
         actions = new Actions(driver);
+
+        //Since we are using POM, lets initialize Page Factory
+        PageFactory.initElements(driver, this);
 
         driver.get(url);
     }
