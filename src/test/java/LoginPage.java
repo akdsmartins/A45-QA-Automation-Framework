@@ -12,11 +12,15 @@ public class LoginPage extends BasePage{
     private WebElement submitBtn;
 
     //Methods
-
     public void provideEmail (String email){
-        
+        emailField.sendKeys(email);
+    }
+    public void providePassword (String password){
+        passwordField.sendKeys(password);
+    }
 
-
+    public void clickLogin (){
+        submitBtn.click();
     }
 }
 
