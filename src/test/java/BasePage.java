@@ -44,9 +44,6 @@ public class BasePage {
         //Actions class object
         actions = new Actions(driver);
 
-        //Since we are using POM, lets initialize Page Factory which will let us initialize page elements without using the FindElement
-        PageFactory.initElements(driver, this);
-
         driver.get(url);
     }
 

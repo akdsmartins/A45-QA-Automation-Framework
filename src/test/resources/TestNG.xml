@@ -6,7 +6,6 @@
     <test name="Project" preserve-order="false">
         <classes>
             <class name="LoginTests"/>
-            <class name="BasePage"/>
         </classes>
     </test>
 </suite>

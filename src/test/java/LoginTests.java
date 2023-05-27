@@ -9,6 +9,8 @@ public class LoginTests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
+
     }
 
 

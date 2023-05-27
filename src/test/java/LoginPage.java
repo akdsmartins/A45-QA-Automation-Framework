@@ -1,8 +1,16 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage{
+
+    //This method is set, so you can pass the driver to the test method
+    public LoginPage(WebDriver driver) {
+        //Since we are using POM, lets initialize Page Factory which will let us initialize page elements without using the FindElement
+        this.driver=driver;
+        PageFactory.initElements( driver, this);
+    }
 
     //Web elements Page Factory
     @FindBy(css = "input[type='email']")
@@ -12,12 +20,6 @@ public class LoginPage extends BasePage{
     @FindBy(css = "button[type='submit']")
     private WebElement submitBtn;
 
-
-    //This method is set, so you can pass the driver to the test method
-    public LoginPage(WebDriver driver) {
-        super();
-    }
-
     //Methods
     public void provideEmail (String email){
         emailField.sendKeys(email);
@@ -25,7 +27,6 @@ public class LoginPage extends BasePage{
     public void providePassword (String password){
         passwordField.sendKeys(password);
     }
-
     public void clickLogin (){
         submitBtn.click();
     }
