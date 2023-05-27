@@ -14,11 +14,11 @@ public class HomePage extends BasePage{
     }
 
     //Web elements Page Factory
-    @FindBy(css = "img.avatar")
-    private WebElement avatar;
+    @FindBy(css = "input[type='search']")
+    private WebElement avatarIcon;
 
     //Methods
     public void verifyLogin (){
-        Assert.
+        Assert.assertEquals(avatarIcon.isDisplayed(), true);
     }
 }
