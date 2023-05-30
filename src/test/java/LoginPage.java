@@ -28,6 +28,7 @@ public class LoginPage extends BasePage{
         passwordField.sendKeys(password);
     }
     public void clickLogin (){
+
         submitBtn.click();
     }
 }

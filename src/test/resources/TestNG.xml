@@ -5,7 +5,11 @@
 
     <test name="Project" preserve-order="false">
         <classes>
-            <class name="LoginTests"/>
+            <class name="AllTests">
+                <methods>
+                    <include name="totalCountOfSongsDisplayed"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
