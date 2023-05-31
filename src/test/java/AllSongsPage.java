@@ -36,7 +36,7 @@ public class AllSongsPage extends BasePage {
     @FindBy(css = "#songsWrapper th.time")
     private WebElement timeColumn;
 
-
+    //Methods
     public void clickAllSongs() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".menu a.songs")));
         AllSongsPage.click();

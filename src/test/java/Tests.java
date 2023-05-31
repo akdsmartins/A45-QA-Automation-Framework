@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class Sprint5 extends BasePage{
+public class Tests extends BasePage{
 
 
     //All Songs Page Tests
@@ -80,6 +80,21 @@ public class Sprint5 extends BasePage{
         loginPage.clickLogin();
         allSongsPage.clickAllSongs();
         allSongsPage.verifyTimeColumnDisplayed();
+    }
+
+    //Playlist Tests
+
+    @Test
+    public void createNewPlaylist (){
+        LoginPage loginPage = new LoginPage(driver);
+        PlaylistPage playlistPage = new PlaylistPage(driver);
+
+        loginPage.provideEmail("amanda.martins@testpro.io");
+        loginPage.providePassword("te$t$tudent");
+        loginPage.clickLogin();
+        playlistPage.clickCreatePlaylist();
+        playlistPage.clickNewPlaylist();
+        playlistPage.enterPlaylistName("myplaylist");
     }
 
 }
