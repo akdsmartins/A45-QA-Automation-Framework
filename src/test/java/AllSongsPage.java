@@ -15,19 +15,60 @@ public class AllSongsPage extends BasePage {
         PageFactory.initElements( driver, this);
     }
 
-    @FindBy(css = ".songs.active")
+    @FindBy(css = ".menu a.songs")
     private WebElement AllSongsPage;
 
     @FindBy(css = "#songsWrapper span.meta.text-secondary")
     private WebElement totalCount;
 
+    @FindBy(css = "#songsWrapper th.track-number")
+    private WebElement idColumn;
+
+    @FindBy(css = "#songsWrapper th.title")
+    private WebElement titleColumn;
+
+    @FindBy(css = "#songsWrapper th.artist")
+    private WebElement artistColumn;
+
+    @FindBy(css = "#songsWrapper th.album")
+    private WebElement albumColumn;
+
+    @FindBy(css = "#songsWrapper th.time")
+    private WebElement timeColumn;
+
+
     public void clickAllSongs() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".songs.active")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".menu a.songs")));
         AllSongsPage.click();
     }
 
-    public void verifyTotalCountSongsDisplayed(){
+    public void verifyTotalCountAndDurationDisplayed(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper span.meta.text-secondary")));
         Assert.assertEquals(totalCount.isDisplayed(), true);
+    }
+
+    public void verifyIdColumnDisplayed(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper th.track-number")));
+        Assert.assertEquals(idColumn.isDisplayed(), true);
+    }
+
+    public void verifyTitleColumnDisplayed(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper th.title")));
+        Assert.assertEquals(titleColumn.isDisplayed(), true);
+    }
+
+    public void verifyArtistColumnDisplayed(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper th.artist")));
+        Assert.assertEquals(artistColumn.isDisplayed(), true);
+    }
+
+    public void verifyAlbumColumnDisplayed(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper th.album")));
+        Assert.assertEquals(albumColumn.isDisplayed(), true);
+    }
+
+    public void verifyTimeColumnDisplayed(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper th.time")));
+        Assert.assertEquals(timeColumn.isDisplayed(), true);
     }
 }
