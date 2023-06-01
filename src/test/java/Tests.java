@@ -94,7 +94,7 @@ public class Tests extends BasePage{
         loginPage.clickLogin();
         playlistPage.clickCreatePlaylist();
         playlistPage.clickNewPlaylist();
-        playlistPage.enterPlaylistName("myplaylist");
+        playlistPage.enterPlaylistName("playlist1");
     }
 
 }
