@@ -85,7 +85,7 @@ public class Tests extends BasePage{
     //Playlist Tests
 
     @Test
-    public void createNewPlaylist (){
+    public void createNewPlaylist () throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         PlaylistPage playlistPage = new PlaylistPage(driver);
 

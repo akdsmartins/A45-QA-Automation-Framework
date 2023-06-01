@@ -38,9 +38,6 @@ public class BasePage {
         driver = new ChromeDriver(options);
         //driver = new EdgeDriver();
 
-        //Implicit wait
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         //Explicit wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -49,7 +46,6 @@ public class BasePage {
 
         driver.get(url);
     }
-
     @AfterMethod
     public void closeBrowser(){
         driver.quit();

@@ -17,7 +17,7 @@ public class PlaylistPage extends BasePage{
     }
 
     //Web elements Page Factory
-    @FindBy(css = "i[title='Create a new playlist']")
+    @FindBy(css = "i[class='fa fa-plus-circle create']")
     private WebElement createPlaylistBtn;
     @FindBy(css = "li[data-testid='playlist-context-menu-create-simple']")
     private WebElement newPlaylistBtn;
@@ -25,8 +25,9 @@ public class PlaylistPage extends BasePage{
     private WebElement inputNameField;
 
     //Methods
-    public void clickCreatePlaylist (){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[title='Create a new playlist']")));
+    public void clickCreatePlaylist () throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[class='fa fa-plus-circle create']")));
+        Thread.sleep(10000);
         createPlaylistBtn.click();
     }
 
