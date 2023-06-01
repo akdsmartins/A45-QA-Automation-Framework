@@ -17,21 +17,21 @@ public class PlaylistPage extends BasePage{
     }
 
     //Web elements Page Factory
-    @FindBy(css = "#playlists .fa")
+    @FindBy(css = "i[title='Create a new playlist']")
     private WebElement createPlaylistBtn;
-    @FindBy(css = "section#playlists .menu [data-testid='playlist-context-menu-create-simple']")
+    @FindBy(css = "li[data-testid='playlist-context-menu-create-simple']")
     private WebElement newPlaylistBtn;
     @FindBy(css = "input[name='name']")
     private WebElement inputNameField;
 
     //Methods
     public void clickCreatePlaylist (){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#playlists .fa")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[title='Create a new playlist']")));
         createPlaylistBtn.click();
     }
 
     public void clickNewPlaylist (){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("section#playlists .menu [data-testid='playlist-context-menu-create-simple']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li[data-testid='playlist-context-menu-create-simple']")));
         newPlaylistBtn.click();
     }
 
