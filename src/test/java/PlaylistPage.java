@@ -26,7 +26,7 @@ public class PlaylistPage extends BasePage{
 
     //Methods
     public void clickCreatePlaylist () {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[class='fa fa-plus-circle create']")))
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[class='fa fa-plus-circle create']")));
         click(createPlaylistBtn);
     }
 
