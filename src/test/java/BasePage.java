@@ -61,6 +61,8 @@ public class BasePage {
     public void click (WebElement locator) {
         findElement(locator).click();
     }
+
+    
 }
 
 

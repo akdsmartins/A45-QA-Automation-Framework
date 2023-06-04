@@ -36,6 +36,9 @@ public class AllSongsPage extends BasePage {
     @FindBy(css = "#songsWrapper th.time")
     private WebElement timeColumn;
 
+    @FindBy(css = "#songsWrapper .items tr:nth-child(1)")
+    private WebElement firstSong;
+
     //Methods
     public void clickAllSongs() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".menu a.songs")));
@@ -70,5 +73,9 @@ public class AllSongsPage extends BasePage {
     public void verifyTimeColumnDisplayed(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#songsWrapper th.time")));
         Assert.assertEquals(timeColumn.isDisplayed(), true);
+    }
+
+    public void selectSong (){
+        firstSong.click();
     }
 }
