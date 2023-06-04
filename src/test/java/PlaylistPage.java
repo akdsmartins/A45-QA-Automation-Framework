@@ -25,10 +25,9 @@ public class PlaylistPage extends BasePage{
     private WebElement inputNameField;
 
     //Methods
-    public void clickCreatePlaylist () throws InterruptedException {
+    public void clickCreatePlaylist () {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[class='fa fa-plus-circle create']")));
-        Thread.sleep(10000);
-        createPlaylistBtn.click();
+        click(createPlaylistBtn);
     }
 
     public void clickNewPlaylist (){
