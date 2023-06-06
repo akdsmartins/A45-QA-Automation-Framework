@@ -5,7 +5,8 @@
 
     <test name="Project" preserve-order="false">
         <classes>
-            <class name="Tests"/>
+            <class name="AllSongsTests"/>
+            <class name="PlaylistTests"/>
         </classes>
     </test>
 </suite>

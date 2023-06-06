@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class Tests extends BasePage{
+public class AllSongsTests extends BasePage{
 
 
     //All Songs Page Tests
@@ -12,6 +12,7 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyTotalCountAndDurationDisplayed();
     }
@@ -23,6 +24,7 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyTotalCountAndDurationDisplayed();
     }
@@ -34,6 +36,7 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyIdColumnDisplayed();
     }
@@ -45,6 +48,7 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyTitleColumnDisplayed();
     }
@@ -56,6 +60,7 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyArtistColumnDisplayed();
     }
@@ -67,6 +72,7 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyAlbumColumnDisplayed();
     }
@@ -78,36 +84,8 @@ public class Tests extends BasePage{
         loginPage.provideEmail("amanda.martins@testpro.io");
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
+
         allSongsPage.clickAllSongs();
         allSongsPage.verifyTimeColumnDisplayed();
-    }
-
-    //Playlist Tests
-
-    @Test
-    public void createNewPlaylist () throws InterruptedException {
-        LoginPage loginPage = new LoginPage(driver);
-        PlaylistPage playlistPage = new PlaylistPage(driver);
-
-        loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
-        loginPage.clickLogin();
-        playlistPage.clickCreatePlaylist();
-        playlistPage.clickNewPlaylist();
-        playlistPage.enterPlaylistName("playlist1");
-    }
-
-    @Test
-    public void addSongsToPlaylist (){
-        LoginPage loginPage = new LoginPage(driver);
-        PlaylistPage playlistPage = new PlaylistPage(driver);
-        AllSongsPage allSongsPage = new AllSongsPage(driver);
-
-        loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
-        loginPage.clickLogin();
-        allSongsPage.clickAllSongs();
-        allSongsPage.rightClickSongFistSong();
-
     }
 }

@@ -23,6 +23,10 @@ public class PlaylistPage extends BasePage{
     private WebElement newPlaylistBtn;
     @FindBy(css = "input[name='name']")
     private WebElement inputNameField;
+    @FindBy(css = ".menu .has-sub")
+    private WebElement addToPlaylist;
+    @FindBy(css = ".menu-add-to li:nth-child(7)")
+    private WebElement playlist;
 
     //Methods
     public void clickCreatePlaylist () throws InterruptedException {
@@ -36,11 +40,12 @@ public class PlaylistPage extends BasePage{
     }
 
     public void enterPlaylistName (String playlistName){
-        sendKeys(inputNameField);
+        sendKeys(inputNameField, playlistName);
         enterKeyBoard();
     }
 
-    public void addSongToPlaylist (){
-
+    public void moveSongToPlaylist (){
+        mouseHover(addToPlaylist);
+        click(playlist);
     }
 }
