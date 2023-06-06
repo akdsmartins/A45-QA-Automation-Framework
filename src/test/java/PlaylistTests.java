@@ -19,6 +19,7 @@ public class PlaylistTests extends BasePage{
         playlistPage.clickCreatePlaylist();
         playlistPage.clickNewPlaylist();
         playlistPage.enterPlaylistName("playlist2");
+        playlistPage.verifyPlaylistIsCreated();
     }
 
     @Test

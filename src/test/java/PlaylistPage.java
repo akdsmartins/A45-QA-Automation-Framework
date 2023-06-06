@@ -26,12 +26,12 @@ public class PlaylistPage extends BasePage{
     private WebElement inputNameField;
 
     @FindBy(css = ".success.show")
-    private WebElement songAddedMessage;
+    private WebElement verifyMessage;
 
     //Methods
     public void clickCreatePlaylist () throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nav[@id='sidebar']/section[@id='playlists']/h1[1]/i[1]")));
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         click(createPlaylistBtn);
     }
 
@@ -45,12 +45,13 @@ public class PlaylistPage extends BasePage{
     }
 
     public void verifyPlaylistIsCreated(){
-        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".success.show")));
+        Assert.assertEquals(verifyMessage.isDisplayed(), true);
     }
 
     public void verifySongIsAdded (){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".success.show")));
-        Assert.assertEquals(songAddedMessage.isDisplayed(), true);
+        Assert.assertEquals(verifyMessage.isDisplayed(), true);
     }
 
 }
