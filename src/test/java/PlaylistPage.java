@@ -17,7 +17,7 @@ public class PlaylistPage extends BasePage{
     }
 
     //Web elements Page Factory
-    @FindBy(css = "i[class='fa fa-plus-circle create']")
+    @FindBy(xpath = "//nav[@id='sidebar']/section[@id='playlists']/h1[1]/i[1]")
     private WebElement createPlaylistBtn;
     @FindBy(css = "li[data-testid='playlist-context-menu-create-simple']")
     private WebElement newPlaylistBtn;
@@ -26,7 +26,7 @@ public class PlaylistPage extends BasePage{
 
     //Methods
     public void clickCreatePlaylist () {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i[class='fa fa-plus-circle create']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nav[@id='sidebar']/section[@id='playlists']/h1[1]/i[1]")));
         click(createPlaylistBtn);
     }
 

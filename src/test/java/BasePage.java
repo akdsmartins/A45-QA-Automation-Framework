@@ -58,8 +58,8 @@ public class BasePage {
     public WebElement findElement(WebElement webElement) {
         return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
-    public void click (WebElement locator) {
-        findElement(locator).click();
+    public void click (WebElement webElement) {
+        findElement(webElement).click();
     }
 
     
