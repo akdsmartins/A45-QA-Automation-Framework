@@ -74,7 +74,7 @@ public class AllSongsPage extends BasePage {
         Assert.assertEquals(timeColumn.isDisplayed(), true);
     }
 
-    public void selectSongAllSongs (){
-        click(firstSong);
+    public void rightClickSongFistSong (){
+        doubleClick(firstSong);
     }
 }

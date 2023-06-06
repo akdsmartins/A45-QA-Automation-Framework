@@ -32,12 +32,15 @@ public class PlaylistPage extends BasePage{
     }
 
     public void clickNewPlaylist (){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li[data-testid='playlist-context-menu-create-simple']")));
-        newPlaylistBtn.click();
+        click(newPlaylistBtn);
     }
 
     public void enterPlaylistName (String playlistName){
         inputNameField.sendKeys(playlistName);
         actions.sendKeys(Keys.ENTER).build().perform();
+    }
+
+    public void addSongToPlaylist (){
+
     }
 }
