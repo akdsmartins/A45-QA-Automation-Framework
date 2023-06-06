@@ -55,8 +55,8 @@ public class BasePage {
 
 
     //Helper methods
-    public WebElement findElement(WebElement locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated((By) locator));
+    public WebElement findElement(WebElement webElement) {
+        return wait.until(ExpectedConditions.visibilityOf(webElement));
     }
     public void click (WebElement locator) {
         findElement(locator).click();
