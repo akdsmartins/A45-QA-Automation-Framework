@@ -85,7 +85,7 @@ public class Tests extends BasePage{
     //Playlist Tests
 
     @Test
-    public void createNewPlaylist () {
+    public void createNewPlaylist () throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         PlaylistPage playlistPage = new PlaylistPage(driver);
 
@@ -97,17 +97,16 @@ public class Tests extends BasePage{
         playlistPage.enterPlaylistName("playlist1");
     }
 
-//    @Test
-//    public void addSongsToPlaylist (){
-//        LoginPage loginPage = new LoginPage(driver);
-//        PlaylistPage playlistPage = new PlaylistPage(driver);
-//        AllSongsPage allSongsPage = new AllSongsPage(driver);
-//
-//        loginPage.provideEmail("amanda.martins@testpro.io");
-//        loginPage.providePassword("te$t$tudent");
-//        loginPage.clickLogin();
-//        allSongsPage.clickAllSongs();
-//        allSongsPage.selectSong();
-//    }
+    @Test
+    public void addSongsToPlaylist (){
+        LoginPage loginPage = new LoginPage(driver);
+        PlaylistPage playlistPage = new PlaylistPage(driver);
+        AllSongsPage allSongsPage = new AllSongsPage(driver);
 
+        loginPage.provideEmail("amanda.martins@testpro.io");
+        loginPage.providePassword("te$t$tudent");
+        loginPage.clickLogin();
+        allSongsPage.clickAllSongs();
+        allSongsPage.selectSong();
+    }
 }

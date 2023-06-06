@@ -16,7 +16,7 @@ public class AllSongsPage extends BasePage {
     }
 
     @FindBy(css = ".menu a.songs")
-    private WebElement AllSongsPage;
+    private WebElement allSongsPage;
 
     @FindBy(css = "#songsWrapper span.meta.text-secondary")
     private WebElement totalCount;
@@ -42,7 +42,7 @@ public class AllSongsPage extends BasePage {
     //Methods
     public void clickAllSongs() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".menu a.songs")));
-        AllSongsPage.click();
+        click(allSongsPage);
     }
 
     public void verifyTotalCountAndDurationDisplayed(){
@@ -76,6 +76,7 @@ public class AllSongsPage extends BasePage {
     }
 
     public void selectSong (){
+
         firstSong.click();
     }
 }

@@ -25,8 +25,9 @@ public class PlaylistPage extends BasePage{
     private WebElement inputNameField;
 
     //Methods
-    public void clickCreatePlaylist () {
+    public void clickCreatePlaylist () throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nav[@id='sidebar']/section[@id='playlists']/h1[1]/i[1]")));
+        Thread.sleep(10000);
         click(createPlaylistBtn);
     }
 
