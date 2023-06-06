@@ -1,3 +1,6 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PlaylistTests extends BasePage{
@@ -29,9 +32,10 @@ public class PlaylistTests extends BasePage{
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
-        allSongsPage.rightClickFistSong();
-        playlistPage.moveSongToPlaylist();
-
+        allSongsPage.clickSong();
+        allSongsPage.clickAddToBtn();
+        allSongsPage.selectPlaylist();
+        playlistPage.verifySongIsAdded();
     }
 
 }

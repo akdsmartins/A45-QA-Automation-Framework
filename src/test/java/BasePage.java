@@ -42,7 +42,7 @@ public class BasePage {
         //driver = new EdgeDriver();
 
         //Explicit wait
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         //Actions class object
         actions = new Actions(driver);
@@ -63,8 +63,8 @@ public class BasePage {
         findElement(webElement).click();
     }
 
-    public void doubleClick (WebElement webElement){
-        actions.doubleClick(findElement(webElement)).perform();
+    public void rightClick (WebElement webElement){
+        actions.contextClick(findElement(webElement)).perform();
     }
 
     public void sendKeys (WebElement webElement, String input){

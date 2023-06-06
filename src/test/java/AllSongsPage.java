@@ -39,6 +39,12 @@ public class AllSongsPage extends BasePage {
     @FindBy(css = "#songsWrapper .items tr:nth-child(1)")
     private WebElement firstSong;
 
+    @FindBy(css = ".btn-add-to")
+    private WebElement addToBtn;
+
+    @FindBy(css = "#songsWrapper li:nth-child(5)")
+    private WebElement selectPlaylistFromAllSongsPage;
+
     //Methods
     public void clickAllSongs() {
         click(allSongsPage);
@@ -74,7 +80,17 @@ public class AllSongsPage extends BasePage {
         Assert.assertEquals(timeColumn.isDisplayed(), true);
     }
 
-    public void rightClickFistSong (){
-        doubleClick(firstSong);
+    public void clickSong (){
+        click(firstSong);
     }
+
+    public void clickAddToBtn (){
+        click(addToBtn);
+    }
+
+    public void selectPlaylist (){
+        click(selectPlaylistFromAllSongsPage);
+    }
+
+
 }

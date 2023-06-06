@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Factory;
 
 public class PlaylistPage extends BasePage{
@@ -23,10 +24,9 @@ public class PlaylistPage extends BasePage{
     private WebElement newPlaylistBtn;
     @FindBy(css = "input[name='name']")
     private WebElement inputNameField;
-    @FindBy(css = ".menu .has-sub")
-    private WebElement addToPlaylist;
-    @FindBy(css = ".menu-add-to li:nth-child(7)")
-    private WebElement playlist;
+
+    @FindBy(css = ".success.show")
+    private WebElement songAddedMessage;
 
     //Methods
     public void clickCreatePlaylist () throws InterruptedException {
@@ -44,8 +44,9 @@ public class PlaylistPage extends BasePage{
         enterKeyBoard();
     }
 
-    public void moveSongToPlaylist (){
-        mouseHover(addToPlaylist);
-        click(playlist);
+    public void verifySongIsAdded (){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".success.show")));
+        Assert.assertEquals(songAddedMessage.isDisplayed(), true);
     }
+
 }
