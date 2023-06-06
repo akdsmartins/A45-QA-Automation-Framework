@@ -36,8 +36,8 @@ public class PlaylistPage extends BasePage{
     }
 
     public void enterPlaylistName (String playlistName){
-        inputNameField.sendKeys(playlistName);
-        actions.sendKeys(Keys.ENTER).build().perform();
+        sendKeys(inputNameField);
+        enterKeyBoard();
     }
 
     public void addSongToPlaylist (){
