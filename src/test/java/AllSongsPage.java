@@ -41,7 +41,6 @@ public class AllSongsPage extends BasePage {
 
     //Methods
     public void clickAllSongs() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".menu a.songs")));
         click(allSongsPage);
     }
 
@@ -75,8 +74,7 @@ public class AllSongsPage extends BasePage {
         Assert.assertEquals(timeColumn.isDisplayed(), true);
     }
 
-    public void selectSong (){
-
-        firstSong.click();
+    public void selectSongAllSongs (){
+        click(firstSong);
     }
 }

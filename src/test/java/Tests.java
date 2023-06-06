@@ -107,6 +107,6 @@ public class Tests extends BasePage{
         loginPage.providePassword("te$t$tudent");
         loginPage.clickLogin();
         allSongsPage.clickAllSongs();
-        allSongsPage.selectSong();
+        allSongsPage.selectSongAllSongs();
     }
 }

@@ -62,6 +62,11 @@ public class BasePage {
         findElement(webElement).click();
     }
 
+    public void doubleClick (WebElement webElement){
+        findElement(webElement)
+
+    }
+
     
 }
 
