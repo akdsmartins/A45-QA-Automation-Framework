@@ -44,6 +44,10 @@ public class PlaylistPage extends BasePage{
         enterKeyBoard();
     }
 
+    public void verifyPlaylistIsCreated(){
+        
+    }
+
     public void verifySongIsAdded (){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".success.show")));
         Assert.assertEquals(songAddedMessage.isDisplayed(), true);
