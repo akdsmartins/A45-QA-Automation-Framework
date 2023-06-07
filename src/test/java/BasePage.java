@@ -78,6 +78,10 @@ public class BasePage {
     public void mouseHover (WebElement webElement) {
         actions.moveToElement(findElement(webElement)).perform();
     }
+
+    public void deleteKeyBoard (){
+        actions.sendKeys(Keys.DELETE).build().perform();
+    }
 }
 
 
