@@ -11,7 +11,7 @@ public class PlaylistTests extends BasePage{
         PlaylistPage playlistPage = new PlaylistPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         playlistPage.clickCreatePlaylist();
@@ -27,7 +27,7 @@ public class PlaylistTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -43,7 +43,7 @@ public class PlaylistTests extends BasePage{
         PlaylistPage playlistPage = new PlaylistPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         playlistPage.selectFirstPlaylist();
@@ -58,7 +58,7 @@ public class PlaylistTests extends BasePage{
         PlaylistPage playlistPage = new PlaylistPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         playlistPage.selectFirstPlaylist();
@@ -72,7 +72,7 @@ public class PlaylistTests extends BasePage{
         PlaylistPage playlistPage = new PlaylistPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         playlistPage.clickCreatePlaylist();
@@ -89,7 +89,7 @@ public class PlaylistTests extends BasePage{
         PlaylistPage playlistPage = new PlaylistPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         playlistPage.clickCreatePlaylist();

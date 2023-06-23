@@ -20,7 +20,7 @@ public class BasePage {
     public static WebDriver driver;
     public static WebDriverWait wait;
     public static Actions actions;
-    public static String url = "https://bbb.testpro.io/";
+    public static String url = "https://qa.koel.app/";
 
 
     //Always set up the browser in before suite

@@ -1,7 +1,10 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 public class LoginPage extends BasePage{
 
@@ -19,6 +22,11 @@ public class LoginPage extends BasePage{
     private WebElement passwordField;
     @FindBy(css = "button[type='submit']")
     private WebElement submitBtn;
+    @FindBy(css = ".home.active")
+    private WebElement homePage;
+
+    @FindBy(css = "#app .error")
+    private WebElement loginError;
 
     //Methods
     public void provideEmail (String email){
@@ -28,8 +36,17 @@ public class LoginPage extends BasePage{
         passwordField.sendKeys(password);
     }
     public void clickLogin (){
-
         submitBtn.click();
+    }
+
+    public void verifyLogin(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".home.active")));
+        Assert.assertEquals(homePage.isDisplayed(), true);
+    }
+
+    public void verifyInvalidLogin(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#app .error")));
+        Assert.assertEquals(loginError.isDisplayed(), true);
     }
 }
 
