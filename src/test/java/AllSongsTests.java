@@ -10,7 +10,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -22,7 +22,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -34,7 +34,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -46,7 +46,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -58,7 +58,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -70,7 +70,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
@@ -82,7 +82,7 @@ public class AllSongsTests extends BasePage{
         AllSongsPage allSongsPage = new AllSongsPage(driver);
 
         loginPage.provideEmail("amanda.martins@testpro.io");
-        loginPage.providePassword("te$t$tudent");
+        loginPage.providePassword("amanda147*");
         loginPage.clickLogin();
 
         allSongsPage.clickAllSongs();
